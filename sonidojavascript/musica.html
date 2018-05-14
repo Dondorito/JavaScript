@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		body{
+			background-color: cyan;
+		}
+		button{
+			width: 250px;
+			height: 130px;
+			font-size: 30px;
+			border: none;
+			border-radius: 15px;
+			background-color: blue;
+		}
+	</style>
+</head>
+<body>
+	<audio id="cancion">
+	<source src="mario.mp3" type="audio/mp3">
+	</audio>
+	<button onclick="play()">Play!</button>
+	<button onclick="stop()">Stop</button>
+	<script type="text/javascript">
+		function play(){
+			cancion.play();
+			document.getElementById('cancion').loop = true;
+		}
+		function stop(){
+			cancion.pause();
+		}
+	</script>
+</body>
+</html>
