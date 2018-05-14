@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejercicio 1</title>
+    <style type="text/css">
+      #mensaje{
+        color: #f42ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Ejercicio 1 JavaScript</h1>
+    <h2>Introducir nombre</h2>
+    <h2 id="mensaje"></h2>
+    <script type="text/javascript">
+      var nombre = prompt("Por favor, introduce tu nombre");
+
+      document.getElementById("mensaje").innerHTML = "Hola " + nombre;
+    </script>
+  </body>
+</html>

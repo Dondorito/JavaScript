@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejercicio 5</title>
+    <style>
+      body{
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center center;
+      }
+    </style>
+    <script type="text/javascript">
+      var nuevo = "si";
+      while(nuevo == "si"){
+      for (var i = 0; i < 3; i++) {
+        var numero = parseInt(Math.random() * 5);
+        var adiv = parseInt(prompt("Adivina el numero"));
+        if(adiv == numero){
+          alert("Has acertado!");
+          break;
+        }
+        else{
+          alert("Intentalo de nuevo");
+        }
+      }
+        var nuevo = prompt("Quieres volver a jugar? Si / No")
+        var nuevo = nuevo.toLowerCase();
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Ejercicio 5 JavaScript</h1>
+    <h2>Adivina el numero</h2>
+  </body>
+</html>

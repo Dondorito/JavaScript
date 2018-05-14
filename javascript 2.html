@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejercicio 2</title>
+    <style type="text/css">
+      #mensaje{
+        color: #f42ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Ejercicio 2 JavaScript</h1>
+    <h2>Sumar numeros</h2>
+    <h2 id="mensaje"></h2>
+    <script type="text/javascript">
+      var numero1 = parseInt(prompt("Por favor, introduce un numero"));
+      var numero2 = parseInt(prompt("Por favor, introduce otro numero"));
+
+      var resultado = numero1 + numero2;
+      document.getElementById("mensaje").innerHMTL = "El resultado es " + resultado;
+    </script>
+  </body>
+</html>

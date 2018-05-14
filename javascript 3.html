@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejercicio 3</title>
+    <script type="text/javascript">
+    	var numero1 = prompt("Por favor, introduce un numero");
+      var numero2 = prompt("Por favor, introduce otro numero");
+      var operador = prompt("+, -, /, *")
+
+      var n1 = parseInt(numero1);
+      var n2 = parseInt(numero2);
+
+      if (operador == "+"){
+        var result = n1 + n2;
+      }
+      else if(operador == "-"){
+        var result = n1 - n2;
+      }
+      else if(operador == "/" && n2 != 0){
+        var result = n1 / n2;
+      }
+      else if(operador == "*"){
+        var result = n1 * n2;
+      }
+      document.write(result);
+    </script>
+  </head>
+  <body>
+    <h1>Ejercicio 3 JavaScript</h1>
+    <h2>Calculadora</h2>
+  </body>
+</html>

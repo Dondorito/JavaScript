@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejercicio 8</title>
+    <script type="text/javascript">
+      function analizar(){
+    	var euro = document.getElementById("euros").value;
+
+      var euro = euro * 1.23835;
+
+      document.getElementById("dollars").value = euro;
+}
+    </script>
+  </head>
+  <body>
+    <h1>Función de JavaScript que convierte Euros a Dolares</h1>
+    <form>
+      Euros:<input type="text" id="euros">
+      <br>
+      Dolares:<input type="text" id="dollars">
+      <br>
+      <input type="button" onclick = "analizar()" value="Analizar">
+  </body>
+</html>
