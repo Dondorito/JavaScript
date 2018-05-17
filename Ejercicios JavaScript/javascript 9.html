@@ -4,11 +4,10 @@
     <meta charset="utf-8">
     <title>Ejercicio 9</title>
     <script type="text/javascript">
-      function calcularCoste(){
+      function calcular(){
         var noches = parseInt(document.getElementById('noches').value);
         var resultadonoches = noches * 140;
-      }
-      function costeAvion(){
+
        var vuelo = document.getElementById('avion').value;
        var vuelo = vuelo.toLowerCase();
        var resultadovuelo = 0;
@@ -20,7 +19,7 @@
         resultadovuelo = 1200;
        }
        else if(vuelo == "madrid"){
-        resultadovuelo = 200; 
+        resultadovuelo = 200;
        }
        else if (vuelo == "barcelona"){
         resultadovuelo = 150;
@@ -32,10 +31,7 @@
         var descuento = resultadovuelo * 0.1;
         resultadovuelo = resultadovuelo - descuento;
        }
-       document.getElementById('resultado2').value = resultadovuelo;
-      }
-      function calcularTodo(){
-        document.getElementById('resultadofinal').innerHTML = resultadonoches + resultadovuelo;
+       document.getElementById('resultadofinal').value = resultadovuelo + resultadonoches;
       }
     </script>
   </head>
@@ -48,11 +44,7 @@
     <br>
     <input type="text" id="avion">
     <br>
-    Introduzca la reserva del coche:
-    <br>
-    <input type="text" id="coche">
-    <br>
-    <button id="calcular" onclick="costealquilerCoche()">calcular coste</button>
+    <button id="calcular" onclick="calcular()">calcular coste</button>
     <br>
     <input type="text" id="resultadofinal">
   </body>
