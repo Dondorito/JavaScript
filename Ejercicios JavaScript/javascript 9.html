@@ -3,49 +3,81 @@
   <head>
     <meta charset="utf-8">
     <title>Ejercicio 9</title>
-    <script type="text/javascript">
-      function calcular(){
-        var noches = parseInt(document.getElementById('noches').value);
-        var resultadonoches = noches * 140;
-
-       var vuelo = document.getElementById('avion').value;
-       var vuelo = vuelo.toLowerCase();
-       var resultadovuelo = 0;
-       var noches = parseInt(document.getElementById('noches').value);
-       if(vuelo == "oviedo"){
-        resultadovuelo = 325;
-       }
-       else if(vuelo == "tokyo"){
-        resultadovuelo = 1200;
-       }
-       else if(vuelo == "madrid"){
-        resultadovuelo = 200;
-       }
-       else if (vuelo == "barcelona"){
-        resultadovuelo = 150;
-       }
-       else{
-        alert("Tienes que seleccionar una ciudad valida");
-       }
-       if(noches >= 3){
-        var descuento = resultadovuelo * 0.1;
-        resultadovuelo = resultadovuelo - descuento;
-       }
-       document.getElementById('resultadofinal').value = resultadovuelo + resultadonoches;
-      }
-    </script>
   </head>
   <body>
     Introduzca el numero de noches:
     <br>
-    <input type="text" id="noches">
+    <input type="number" id="noches">
     <br>
     Introduzca el vuelo:
     <br>
-    <input type="text" id="avion">
+    <select id="avion">
+      <option value="oviedo">Oviedo</option>
+      <option value="tokyo">Tokyo</option>
+      <option value="madrid">Madrid</option>
+      <option value="barcelona">Barcelona</option>
+    </select>
     <br>
-    <button id="calcular" onclick="calcular()">calcular coste</button>
+    Introduzca el numero de dias que quiere alquilar un coche:
+    <br>
+    <input type="number" id="coche">
+    <br>
+    <button id="calcular" onclick="costeTotal()">calcular coste</button>
     <br>
     <input type="text" id="resultadofinal">
+
+    <script type="text/javascript">
+      function costeTotal(){
+        //CALCULAR NOCHES
+        var noches = parseInt(document.getElementById("noches").value);
+        var resultadoNoches;
+
+        resultadoNoches = noches*140;
+        //FIN CALCULAR NOCHES
+
+        //CALCULAR AVION
+        var opcion = document.getElementById("avion").value;
+        var costeAvion;
+
+        switch(opcion){
+          case "oviedo":
+          costeAvion = 325;
+          break;
+          case "tokyo":
+          costeAvion = 1200;
+          break;
+          case "madrid":
+          costeAvion = 200;
+          break;
+          case "barcelona":
+          costeAvion = 150;
+          break;
+        }
+        if(noches >= 3){
+          costeAvion = costeAvion * 0.9;
+        }
+        //FIN CALCULAR AVION
+        var coche = document.getElementById("coche").value;
+        var costeCoche;
+        var descuento;
+
+        if(coche >= 3){
+          descuento = 20;
+        }
+        else if(coche >= 7){
+          descuento = 50;
+        }
+        else{
+          descuento = 0;
+        }
+        costeCoche = coche * 40;
+
+        //CALCULO DE TO
+        var resultadoTotal = resultadoNoches + costeAvion + costeCoche;
+        resultadoTotal += descuento;
+        document.getElementById("resultadofinal").value = resultadoTotal;
+        //FIN CALCULO DE TO
+      }
+    </script>
   </body>
 </html>
