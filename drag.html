@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Draggable - Default functionality</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <style>
+    img{
+      width: 100px;
+      height: 100px;
+    }
+    #caja{
+      width: 400px;
+      height: 200px;
+      border: 1px solid black;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#draggable" ).draggable();
+    $("#drop").droppable(event, ui){
+      $(this)
+      .addClass("ui-widget-content")
+    }
+  } );
+  </script>
+</head>
+<body>
+<div id="caja"></div>
+<img src="https://ugc.kn3.net/i/760x/http://images.wikia.com/silenthill/es/images/0/04/Incubus.png" id="draggable" class="ui-widget-content">
+<div id="drpp"></div>
+
+</body>
+</html>
