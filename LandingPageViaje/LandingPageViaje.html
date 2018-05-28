@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:700|Roboto+Mono" rel="stylesheet">
+    <title>Deluxe Fly</title>
+    <script type="text/javascript">
+      function sacar(){
+        document.getElementById("viaje").style.opacity = "1";
+        document.getElementById("viaje").style.margin = "1%";
+        document.getElementById("titulo").style.opacity = "0";
+        document.getElementById("botonViaje").style.opacity = "0";
+        document.getElementById("titulo").style.marginLeft = "-9999px";
+        document.getElementById("botonViaje").style.marginLeft = "-9999px";
+      }
+      function ocultar(){
+        document.getElementById("viaje").style.opacity = "0";
+        document.getElementById("viaje").style.marginLeft = "80%";
+        document.getElementById("titulo").style.opacity = "1";
+        document.getElementById("botonViaje").style.opacity = "1";
+        document.getElementById("titulo").style.marginLeft = "1%";
+        document.getElementById("botonViaje").style.marginLeft = "1%";
+      }
+    </script>
+    <style media="screen">
+      body{
+        width: 100%;
+        height: 100%;
+        background-image: url(images/plane1.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        overflow: hidden;
+      }
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      #contenido{
+        width: 100%;
+        height: 100%;
+      }
+      #titulo{
+        font-family: 'Libre Baskerville', 'sans-serif';
+        font-size: 2vw;
+        font-weight: 700;
+        margin-top: 2%;
+        margin-left: 1%;
+        width: 20%;
+        float: left;
+        overflow: hidden;
+        transition: ease-in-out 3s;
+      }
+      #titulo h4{
+        font-size: 20px;
+        font-family: 'sans-serif';
+        font-weight: normal;
+        transition: ease-in-out 1s;
+      }
+      #botonViaje{
+        width: 100%;
+        height: 50px;
+      }
+      button{
+        min-width: 20%;
+        height: 50px;
+        font-family: 'Roboto Mono', 'sans-serif';
+        font-size: 20px;
+        letter-spacing: 5px;
+        margin-left: 1%;
+        margin-top: 1%;
+        border: none;
+        background-color: rgba(186, 196, 65, 0.7);
+        overflow: hidden;
+        transition: ease-in-out 3s;
+      }
+      #viaje{
+        width: 20%;
+        height: 100%;
+        color: white;
+        margin-left: 80%;
+        opacity: 0;
+        top: 0;
+        float: left;
+        overflow: hidden;
+        font-family: 'sans-serif';
+        font-size: 2vw;
+        transition: ease-in-out 2s;
+      }
+      input{
+        width: 50%;
+        height: 60px;
+        border: none;
+        font-size: 20px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="contenido">
+      <div id="titulo">
+      <h1>TRAVEL FAST FLY SECURE</h1>
+      <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    <button id="botonViaje" onclick="sacar()">Check our travels</button>
+</div>
+    <div id="viaje">
+      <button id="cerrarViaje" onclick="ocultar()">serrar</button>
+      <h3>Number of nights</h3>
+      <input type="number" name="noches" value="">
+      <br>
+      <h3>Destination</h3>
+      <select id="vuelos" name="vuelos">
+        <option value="oviedo">Oviedo</option>
+        <option value="tokyo">Tokyo</option>
+        <option value="madrid">Madrid</option>
+        <option value="barcelona">Barcelona</option>
+      </select>
+      <br>
+      <h3>Would you need a car?</h3>
+      <input type="checkbox" name="coche" value="">
+      <br>
+      <input type="submit" name="viajar" value="Travel">
+    </div>
+    </div>
+  </body>
+</html>
