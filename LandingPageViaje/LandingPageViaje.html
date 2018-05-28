@@ -86,12 +86,20 @@
         font-size: 2vw;
         transition: ease-in-out 2s;
       }
-      input{
-        width: 50%;
-        height: 60px;
+      select, input[type="text"]{
+        width: 100%;
+        height: 50px;
         border: none;
+        background-color: rgba(186, 196, 65, 0.4);
+        color: black;
         font-size: 20px;
-        text-align: center;
+      }
+      #confirmar{
+        letter-spacing: none;
+        font-family: 'sans-serif';
+      }
+      label: hover{
+        cursor: pointer;
       }
     </style>
   </head>
@@ -101,12 +109,13 @@
       <h1>TRAVEL FAST FLY SECURE</h1>
       <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      <label>
     <button id="botonViaje" onclick="sacar()">Check our travels</button>
+  </label>
 </div>
     <div id="viaje">
-      <button id="cerrarViaje" onclick="ocultar()">serrar</button>
       <h3>Number of nights</h3>
-      <input type="number" name="noches" value="">
+      <input type="text" name="noches" value="">
       <br>
       <h3>Destination</h3>
       <select id="vuelos" name="vuelos">
@@ -117,9 +126,13 @@
       </select>
       <br>
       <h3>Would you need a car?</h3>
-      <input type="checkbox" name="coche" value="">
+      <label>
+      <input type="checkbox" name="coche" value="" id="check">
+      </label>
       <br>
-      <input type="submit" name="viajar" value="Travel">
+      <button type="button" name="button" id="confirmar">Travel</button>
+      <br>
+      <button id="cerrarViaje" onclick="ocultar()">serrar</button>
     </div>
     </div>
   </body>
