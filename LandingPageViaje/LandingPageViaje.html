@@ -13,7 +13,7 @@
       document.getElementById("botonViaje").style.opacity = "0";
       document.getElementById("titulo").style.marginLeft = "-9999px";
       document.getElementById("botonViaje").style.marginLeft = "-9999px";
-      //document.body.style.backgroundImage = "url('images/city2.jpg')";
+      document.body.style.backgroundImage = "url('images/city3.jpg')";
     }
 
     function ocultar() {
@@ -22,19 +22,18 @@
       document.getElementById("titulo").style.opacity = "1";
       document.getElementById("botonViaje").style.opacity = "1";
       document.getElementById("titulo").style.marginLeft = "1%";
-      document.getElementById("botonViaje").style.marginLeft = "1%";
-      //document.body.style.backgroundImage = "url('images/plane1.jpg')";
+      document.getElementById("botonViaje").style.marginLeft = "0";
+      document.body.style.backgroundImage = "url('images/plane2.jpg')";
     }
   </script>
   <style media="screen">
     body {
       width: 100%;
       height: 100%;
-      background-image: url(images/plane1.jpg);
+      background-image: url(images/plane2.jpg);
       background-size: cover;
       background-repeat: no-repeat;
       overflow: hidden;
-      transition: background-image 0.5s linear;
     }
 
     * {
@@ -42,25 +41,20 @@
       padding: 0;
     }
 
-    #contenido {
-      width: 100%;
-      height: 100%;
-    }
-
     #titulo {
       font-family: 'Libre Baskerville', 'sans-serif';
-      font-size: 2vw;
+      font-size: 30px;
       font-weight: 700;
       margin-top: 2%;
       margin-left: 1%;
-      width: 20%;
+      width: 23%;
       float: left;
       overflow: hidden;
       transition: ease-in-out 3s;
     }
 
     #titulo h4 {
-      font-size: 20px;
+      font-size: 15px;
       font-family: 'sans-serif';
       font-weight: normal;
       transition: ease-in-out 1s;
@@ -69,6 +63,7 @@
     #botonViaje {
       width: 100%;
       height: 50px;
+      margin-top: 5%;
     }
 
     button {
@@ -77,8 +72,6 @@
       font-family: 'Roboto Mono', 'sans-serif';
       font-size: 20px;
       letter-spacing: 5px;
-      margin-left: 1%;
-      margin-top: 1%;
       border: none;
       background-color: rgba(186, 196, 65, 0.7);
       overflow: hidden;
@@ -86,7 +79,7 @@
     }
 
     #viaje {
-      width: 20%;
+      width: 500px;
       height: 100%;
       color: white;
       margin-left: 80%;
@@ -116,15 +109,12 @@
   </style>
 </head>
 
-<body>//
-  <div id="contenido">
+<body>
     <div id="titulo">
       <h1>TRAVEL FAST FLY SECURE</h1>
       <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      <label>
     <button id="botonViaje" onclick="sacar()">Check our travels</button>
-  </label>
 </div>
     <div id="viaje">
       <h3>Number of nights</h3>
@@ -146,7 +136,6 @@
       <button type="button" name="button" id="confirmar">Travel</button>
       <br>
       <button id="cerrarViaje" onclick="ocultar()">serrar</button>
-    </div>
     </div>
   </body>
 </html>
