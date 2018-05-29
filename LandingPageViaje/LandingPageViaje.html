@@ -28,10 +28,10 @@
       width: 100%;
       height: 100%;
       background-image: url(images/plane2.jpg);
-      background-size: cover;
+      background-size: 100%;
       background-repeat: no-repeat;
       overflow: hidden;
-      transition: background-image 0.2s ease-in-out;
+      transition: 1s ease-in-out;
     }
 
     * {
@@ -76,7 +76,7 @@
     }
 
     #viaje {
-      width: 500px;
+      width: 800px;
       height: 100%;
       color: white;
       margin-left: 120%;
@@ -84,12 +84,32 @@
       top: 0;
       float: left;
       overflow: hidden;
-      font-family: 'sans-serif';
-      font-size: 2vw;
       transition: ease-in-out 2s;
     }
 
+    .cajita{
+      width: 100%;
+      border-radius: 15px;
+      padding: 20px;
+      height: 200px;
+      font-family: 'sans-serif';
+      font-size: 40px;
+      background-color: rgba(186, 196, 65, 0.7);
+      margin-bottom: 5%;
+    }
+    .cosasViaje{
+      width: 80%;
+      height: 70px;
+      border: none;
+      background-color: rgba(186, 196, 65, 0.7);
+      color: white;
+      text-align: center;
+      font-family: 'sans-serif';
+      font-size: 50px;
+      margin-top: 50px;
+    }
     #confirmar {
+      width: 100%;
       letter-spacing: none;
       font-family: 'sans-serif';
     }
@@ -104,22 +124,23 @@
     <button id="botonViaje" onclick="sacar()">Check our travels</button>
 </div>
     <div id="viaje">
+      <div class="cajita">
       <h3>Number of nights</h3>
-      <input type="text" name="noches" value="">
-      <br>
+      <input type="text" name="noches" value="" class="cosasViaje">
+      </div>
+      <div class="cajita">
       <h3>Destination</h3>
-      <select id="vuelos" name="vuelos">
+      <select id="vuelos" name="vuelos" class="cosasViaje">
         <option value="oviedo">Oviedo</option>
         <option value="tokyo">Tokyo</option>
         <option value="madrid">Madrid</option>
         <option value="barcelona">Barcelona</option>
       </select>
-      <br>
+    </div>
+    <div class="cajita">
       <h3>Would you need a car?</h3>
-      <label>
-      <input type="checkbox" name="coche" value="" id="check">
-      </label>
-      <br>
+      <input type="checkbox" name="coche" value="" id="check" class="cosasViaje">
+    </div>
       <button type="button" name="button" id="confirmar">Travel</button>
       <br>
       <button id="cerrarViaje" onclick="ocultar()">serrar</button>
