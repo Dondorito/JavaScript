@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+  <title>Juego Animales JQuery</title>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    $(function() {
+
+      var animals = ["img/cat.jpg", "img/horse.jpg", "img/kang.jpg", "img/carrion.jpg"]
+      var random = Math.floor(Math.random() * (4 - 1 + 1));
+      $("#resultado").attr("src", animals[random]);
+
+      //------------------COMIENZO IF TEXTO------------------
+      if (random == 0) {
+        $("#texto").html("GATO");
+      } else if (random == 1) {
+        $("#texto").html("CABALLO");
+      } else if (random == 2) {
+        $("#texto").html("CANGURO");
+      } else {
+        $("#texto").html("CARRION");
+      }
+      //------------------FINAL IF TEXTO------------------
+      //------------------COMIENZO FUNCION CLICK------------------
+      $(".imagen").click(function() {
+        if ($(this).attr("src") == $("#resultado").attr("src")) {
+          alert("exito");
+        } else {
+          alert("fracaso");
+        }
+      })
+      //------------------FINAL FUNCION CLICK------------------
+    })
+    //------------------FINAL SCRIPT------------------
+  </script>
+  <style media="screen">
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .imagen {
+      width: 25%;
+      height: 700px;
+      float: left;
+      border: black solid 5px;
+      box-sizing: border-box;
+      border-radius: 25px;
+    }
+
+    #resultado {
+      display: none;
+    }
+
+    h1{
+      font-family: 'Permanent Marker', 'sans-serif';
+      text-align: center;
+      font-size: 3vw;
+    }
+    h2{
+      font-family: 'Permanent Marker', 'sans-serif';
+      text-align: center;
+      font-size: 3vw;
+      color: red;
+    }
+
+  </style>
+</head>
+
+<body>
+  <h1>ADIVINA EL ANIMAL</h1>
+  <img src="img/cat.jpg" width="500px" height="500px" class="imagen" class="imagen">
+  <img src="img/horse.jpg" width="500px" height="500px" class="imagen">
+  <img src="img/kang.jpg" width="500px" height="500px" class="imagen">
+  <img src="img/carrion.jpg" width="500px" height="500px" class="imagen">
+
+  <h2 id="texto"></h2>
+  <img src="img/cat.jpg" width="500px" height="500px" id="resultado">
+
+
+</body>
+
+</html>
