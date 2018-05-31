@@ -33,13 +33,13 @@ $(function() {
 
   //------------------COMIENZO IF TEXTO------------------
   if (random == 0) {
-    $("#textoResultado").html("猫");
+    $("#textoResultado").html("GATO");
   } else if (random == 1) {
-    $("#textoResultado").html("馬");
+    $("#textoResultado").html("CABALLO");
   } else if (random == 2) {
-    $("#textoResultado").html("カンガルー");
+    $("#textoResultado").html("CANGURO");
   } else {
-    $("#textoResultado").html("腐肉");
+    $("#textoResultado").html("PEREZOSO");
   }
   //------------------FINAL IF TEXTO------------------
 }
