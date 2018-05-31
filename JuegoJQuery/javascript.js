@@ -6,13 +6,26 @@ $(function() {
   random = randomUno = randomDos = randomTres = randomCuatro = Math.floor(Math.random() * (4 - 1 + 1));
   var nombre = $("#usu");
   var edad = $("#ed");
-  var contador = 0;
+  var contador = -1;
   var fracasos = 0;
+  $("#hachedos").html("Dale a un animal para comenzar");
 
   $("#btn").click(function(){
+    if(edad.val() < 1){
+      alert("La edad minima es de 1 año");
+    }
+    else if(nombre.val() == "" || edad.val() == ""){
+      alert("Has dejado algun campo sin rellenar");
+    }
+    else if(Number.isInteger(edad.val()) == true){
+      alert("La edad debe ser numerica");
+    }
+    else{
+    document.getElementById('cancion').play();
     $("#usuario").html(nombre.val());
     $("#inicio").animate({height: '0px'});
     $("#edad").html(edad.val());
+  }
   });
 
   function aleatorio(){
@@ -58,11 +71,19 @@ $(function() {
 }
   //------------------COMIENZO FUNCION CLICK------------------
   $(".imagen").click(function() {
-    if ($(this).attr("src") == $("#resultado").attr("src")) {
+    if(contador < 0){
+      alert("Bienvenido!");
+      contador++;
+      aleatorio();
+    }
+    else if ($(this).attr("src") == $("#resultado").attr("src")) {
       alert("Acertaste");
       contador++;
+      $("#aci").html(contador);
       if(contador == 6){
         $("#win").animate({height: '100%'});
+        document.getElementById('cancion').pause();
+        document.getElementById('sngganar').play();
         $("#win").click(function(){
           location.reload();
         })
@@ -71,8 +92,11 @@ $(function() {
     } else {
       alert("Fallaste");
       fracasos++;
+      $("#fal").html(fracasos);
       if(fracasos == 6){
         $("#lose").animate({height: '100%'});
+        document.getElementById('cancion').pause();
+        document.getElementById('sngperder').play();
         $("#lose").click(function(){
           location.reload();
         })
