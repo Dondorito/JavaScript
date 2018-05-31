@@ -47,6 +47,7 @@ html, body {
 
 .imagen {
   width: 25%;
+  height: 40%;
   float: left;
   border-top: solid 5px black;
   border-bottom: solid 5px black;
@@ -61,4 +62,9 @@ html, body {
 
 #cuatro {
   border-right: none;
+}
+
+input{
+  border: none;
+
 }

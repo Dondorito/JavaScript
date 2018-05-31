@@ -1,4 +1,4 @@
-//------------------COMIENZO SCRIPT------------------
+  //------------------COMIENZO SCRIPT------------------
 $(function() {
 
   var animals = ["img/cat.jpg", "img/horse.jpg", "img/kang.jpg", "img/carrion.jpg"]
@@ -59,7 +59,7 @@ $(function() {
   //------------------COMIENZO FUNCION CLICK------------------
   $(".imagen").click(function() {
     if ($(this).attr("src") == $("#resultado").attr("src")) {
-      alert("exito");
+      alert("Acertaste");
       contador++;
       if(contador == 6){
         $("#win").animate({height: '100%'});
@@ -69,7 +69,7 @@ $(function() {
       }
       aleatorio();
     } else {
-      alert("fracaso");
+      alert("Fallaste");
       fracasos++;
       if(fracasos == 6){
         $("#lose").animate({height: '100%'});
