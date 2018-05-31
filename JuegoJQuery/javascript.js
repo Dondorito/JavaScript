@@ -20,12 +20,18 @@ $(function() {
     else if(Number.isInteger(edad.val()) == true){
       alert("La edad debe ser numerica");
     }
+    else if($("#dificil").prop('checked')){
+      document.getElementById('audif').play();
+      $("#usuario").html(nombre.val());
+      $("#inicio").animate({height: '0px'});
+      $("#edad").html(edad.val());
+    }
     else{
-    document.getElementById('cancion').play();
-    $("#usuario").html(nombre.val());
-    $("#inicio").animate({height: '0px'});
-    $("#edad").html(edad.val());
-  }
+      document.getElementById('cancion').play();
+      $("#usuario").html(nombre.val());
+      $("#inicio").animate({height: '0px'});
+      $("#edad").html(edad.val());
+    }
   });
 
   function aleatorio(){
@@ -83,6 +89,7 @@ $(function() {
       if(contador == 6){
         $("#win").animate({height: '100%'});
         document.getElementById('cancion').pause();
+        document.getElementById('audif').pause();
         document.getElementById('sngganar').play();
         $("#win").click(function(){
           location.reload();
@@ -96,6 +103,7 @@ $(function() {
       if(fracasos == 6){
         $("#lose").animate({height: '100%'});
         document.getElementById('cancion').pause();
+        document.getElementById('audif').pause();
         document.getElementById('sngperder').play();
         $("#lose").click(function(){
           location.reload();
