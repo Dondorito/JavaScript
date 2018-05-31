@@ -32,6 +32,18 @@ $(function() {
 
 
   //------------------COMIENZO IF TEXTO------------------
+  if($("#dificil").prop('checked')){
+    if (random == 0) {
+      $("#textoResultado").html("猫");
+    } else if (random == 1) {
+      $("#textoResultado").html("馬");
+    } else if (random == 2) {
+      $("#textoResultado").html("カンガルー");
+    } else {
+      $("#textoResultado").html("怠惰な");
+    }
+  }
+  else{
   if (random == 0) {
     $("#textoResultado").html("GATO");
   } else if (random == 1) {
@@ -41,6 +53,7 @@ $(function() {
   } else {
     $("#textoResultado").html("PEREZOSO");
   }
+}
   //------------------FINAL IF TEXTO------------------
 }
   //------------------COMIENZO FUNCION CLICK------------------
