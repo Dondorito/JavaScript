@@ -5,22 +5,27 @@
   <meta charset="utf-8">
   <title>Deluxe Travels</title>
   <link rel="stylesheet" href="estilo.css">
+  <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Roboto+Mono" rel="stylesheet">
   <script type="text/javascript" src="javascript.js"></script>
 </head>
 
 <body>
   <div id="container">
     <div id="main">
-      <h1>FLY SECURE TRAVEL FAST</h1>
-      <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      </h4>
+      <div id="title">
+        <h1>FLY SECURE TRAVEL FAST</h1>
+        <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </h4>
+        <button id="btnScroll">Check our travels</button>
+      </div>
     </div>
     <div id="travel">
-      Number of nights:
+      <h2 class="textTravel">Number of nights:</h2>
       <input type="text" id="nights">
-      <br> Select a city to fly:
+      <br>
+      <h2 class="textTravel">Select a city to fly:</h2>
       <br>
       <select id="flights">
         <option value="oviedo">Oviedo</option>
@@ -28,7 +33,8 @@
         <option value="barcelona">Barcelona</option>
         <option value="tokyo">Tokyo</option>
       </select>
-      <br> Need a car?
+      <br>
+      <h2 class="textTravel">Need a car?</h2>
       <br> Yes
       <input type="radio" id="yes" name="car">
       <br> No
