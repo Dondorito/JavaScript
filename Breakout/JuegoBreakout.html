@@ -9,12 +9,8 @@
       margin: 0;
       padding: 0;
     }
-
-    #canvas {
-      background: #414144;
-      display: block;
-      margin: 0 auto;
-      margin-top: 400px;
+    canvas{
+      background-color: #702798;
     }
   </style>
 </head>
@@ -82,7 +78,7 @@
           bricks[c][r].y = brickY;
           ctx.beginPath();
           ctx.rect(brickX, brickY, brickWidth, brickHeight);
-          ctx.fillStyle = "#560d8f";
+          ctx.fillStyle = "#50c826";
           ctx.fill();
           ctx.closePath();
         }

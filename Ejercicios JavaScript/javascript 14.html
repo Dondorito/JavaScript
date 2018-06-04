@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Javascript para recoger y procesar los datos</h1>
+    Nombre del cliente:
+    <br>
+    <input type="text" id="nombre">
+    <br>
+    Material de la caja:
+    <select id="materiales">
+      <option value="Madera">Madera</option>
+      <option value="Aluminio">Aluminio</option>
+      <option value="Vibranium">Vibranium</option>
+    </select>
+    <br><br>
+    Seleccione las dimesiones para la caja:
+    <br>
+    Diminuta<input type="radio" class="cosa" name="size" value="Diminuta">
+    <br>
+    Mediano<input type="radio" class="cosa" name="size" value="Mediano">
+    <br>
+    Grande<input type="radio" class="cosa" name="size" value="Grande">
+    <br>
+    Comentarios:
+    <br>
+    <textarea id="caja" rows="2" cols="20"></textarea>
+    <br>
+    <button id="boton" onclick="h()">enviar</button>
+    <br>
+    <textarea id="caja" rows="8" cols="80" style="display: none;"></textarea>
+    <script>
+      function h(){
+        var nombre = document.getElementById("nombre").value;
+        var sel = document.getElementById("materiales").value;
+        var rad = document.getElementsByClassName("cosa").checked = true;
+
+        alert(rad.value);
+      }
+    </script>
+  </body>
+</html>
