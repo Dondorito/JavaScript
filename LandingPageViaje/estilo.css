@@ -1,55 +1,102 @@
-html, body{
+html, body {
   height: 100%;
+  overflow: hidden;
 }
-*{
+
+* {
   padding: 0;
   margin: 0;
 }
+
 /* div{
   border: solid 1px blue;
   box-sizing: border-box;
 } */
-#container{
+
+#container {
   width: 100%;
   height: 100%;
   background-image: url('images/plane1.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  -webkit-transition: background-image 0.2s ease-in-out;
 }
-#main{
+
+button::-moz-focus-inner {
+  border: none;
+}
+
+#main {
   width: 80%;
   height: 100%;
   float: left;
+  transition: ease-in-out 5s;
 }
-#travel{
+
+#travel {
   width: 20%;
   height: 100%;
   float: left;
+  opacity: 0;
 }
-.textTravel{
+
+.textTravel {
   font-family: 'sans-serif';
   font-size: 2vw;
 }
-input, select{
+
+input, select {
   border: none;
   width: 100%;
   height: 30px;
   font-family: 'Roboto Mono', 'sans-serif';
   font-size: 20px;
 }
-#title{
+
+#btnBack{
+  font-family: 'Roboto Mono';
+  font-size: 20px;
+  letter-spacing: 5px;
+  border: none;
+  width: 30%;
+  height: 30px;
+  margin-top: 2%;
+  margin-top: 50%;
+  transition: ease-in-out 0.3s;
+}
+#btn {
+  font-family: 'Roboto Mono';
+  font-size: 20px;
+  letter-spacing: 5px;
+  border: none;
+  width: 30%;
+  height: 30px;
+  margin-top: 2%;
+  transition: ease-in-out 0.3s;
+}
+
+#btn:hover {
+  cursor: pointer;
+  background-color: #131313;
+  color: white;
+}
+
+#title {
   width: 25%;
   margin-left: 1%;
 }
-#title h1{
+
+#title h1 {
   font-family: 'Alfa Slab One', 'sans-serif';
   font-size: 4vw;
 }
-#title h4{
+
+#title h4 {
   font-family: 'sans-serif';
   font-size: 0.7vw;
 }
-#btnScroll{
+
+#btnScroll {
   font-family: 'Roboto Mono';
   font-size: 20px;
   letter-spacing: 5px;
@@ -59,8 +106,14 @@ input, select{
   margin-top: 2%;
   transition: ease-in-out 0.3s;
 }
-#btnScroll:hover{
+
+#btnScroll:hover {
   background-color: #131313;
   color: white;
   cursor: pointer;
+}
+
+#textResult {
+  font-family: '  Alfa Slab One', 'sans-serif';
+  font-size: 2vw;
 }

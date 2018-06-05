@@ -18,7 +18,7 @@
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </h4>
-        <button id="btnScroll">Check our travels</button>
+        <button id="btnScroll" onclick="NintendoSwitch()">Click me</button>
       </div>
     </div>
     <div id="travel">
@@ -35,12 +35,18 @@
       </select>
       <br>
       <h2 class="textTravel">Need a car?</h2>
-      <br> Yes
+      <br>
+      <h2 class="textTravel">Yes</h2>
       <input type="radio" id="yes" name="car">
-      <br> No
+      <br>
+      <h2 class="textTravel">No</h2>
       <input type="radio" id="no" name="car">
       <br>
       <button id="btn" onclick="travel()">Proceed</button>
+      <br>
+      <br>
+      <h2 id="textResult"></h2>
+      <button id="btnBack" onclick="back()">Back</button>
     </div>
   </div>
 </body>
