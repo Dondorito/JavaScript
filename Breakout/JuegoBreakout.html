@@ -10,6 +10,10 @@
 </head>
 
 <body>
+  <audio id="cancion">
+    <source src="music/music2.mp3" type="audio/mp3">
+  </audio>
+
   <div id="inicio">
     <h1 id="titulo">Breakout Online</h1>
     <button id="btnIntro" class="btn" onclick="intro()">Play Game!</button>
@@ -34,7 +38,7 @@
       <h2 class="CurrentUserScoreLives" id="LAIFS">3</h2>
     </div>
     <div class="box">
-      <button class="butons"><img src="img/mute.png" width="100%" height="100%"></button>
+      <button class="butons" onclick="document.getElementById('cancion').pause()"><img src="img/mute.png" width="100%" height="100%"></button>
       <br>
       <button class="butons">Exit</button>
     </div>
@@ -42,6 +46,9 @@
     <div id="footer">
       <h4 id="pie">CopyRight Dondorito&#169;</h4>
     </div>
+  </div>
+  <div id="GANASTE">
+    <h1 id="TitleWin"></h1>
   </div>
 
   <script type="text/javascript" src="Javascript.js"></script>
