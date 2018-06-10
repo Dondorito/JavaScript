@@ -103,6 +103,7 @@ function collisionDetection() {
           dy = -dy;
           b.status = 0;
           score++;
+          document.getElementById('beep').play();
           if (score == brickRowCount * brickColumnCount) {
             document.getElementById('cancion').pause();
             alert("YOU WIN, CONGRATS!");
@@ -181,6 +182,7 @@ setTimeout(function draw() {
       }
       //En caso de que toques el suelo y tengas mas de 1 vida se reseta la posición
       else {
+        document.getElementById('explosion').play();
         x = canvas.width / 2;
         y = canvas.height - 30;
         dx = 7;
