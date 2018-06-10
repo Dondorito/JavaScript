@@ -5,18 +5,23 @@ function intro() {
 
 function intro2() {
   var usuario = document.getElementById('usuario').value;
-  if(usuario == ""){
-    alert('You must put a username')
+  if(usuario == "" || usuario == "YOU HAVE TO INTRODUCE A USERNAME"){
+    document.getElementById('usuario').value = "YOU HAVE TO INTRODUCE A USERNAME";
+    document.getElementById('usuario').style.color = "red";
     return false;
     usuario.focus();
   }
   document.getElementById('inicio2').style.height = "0";
   document.getElementById('Game').style.height = "100%";
   document.getElementById('currentUser').innerText = usuario.toUpperCase();
+  document.getElementById('cancion').volume = 0.2;
+  document.getElementById('beep').volume = 0.4;
+  document.getElementById('explosion').volume = 0.4;
+  document.getElementById('win').volume = 0.3;
+  document.getElementById('def').volume = 0.3;
 
   setTimeout(
     function(){
-      document.getElementById('cancion').volume = 0.2;
       document.getElementById('cancion').play();
     }, 3000
   )
@@ -106,8 +111,12 @@ function collisionDetection() {
           document.getElementById('beep').play();
           if (score == brickRowCount * brickColumnCount) {
             document.getElementById('cancion').pause();
-            alert("YOU WIN, CONGRATS!");
-            document.location.reload();
+            document.getElementById('win').play();
+            document.getElementById('TitleWin').innerText = "YOU WIN!";
+            document.getElementById('GANASTE').style.height = "100%";
+            draw.break();
+            // alert("YOU WIN, CONGRATS!");
+            // document.location.reload();
           }
         }
       }
@@ -119,7 +128,7 @@ function collisionDetection() {
 function drawBall() {
   ctx.beginPath();
   ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
-  ctx.fillStyle = "#0095DD";
+  ctx.fillStyle = "rgb(0, 41, 255)";
   ctx.fill();
   ctx.closePath();
 }
@@ -144,7 +153,7 @@ function drawBricks() {
         bricks[c][r].y = brickY;
         ctx.beginPath();
         ctx.rect(brickX, brickY, brickWidth, brickHeight);
-        ctx.fillStyle = "#0095DD";
+        ctx.fillStyle = "rgb(12, 218, 181)";
         ctx.fill();
         ctx.closePath();
       }
@@ -177,8 +186,12 @@ setTimeout(function draw() {
       lives--;
       if (!lives) {
         document.getElementById('cancion').pause();
-        alert("GAME OVER");
-        document.location.reload();
+        document.getElementById('def').play();
+        document.getElementById('TitleWin').innerText = "YOU LOSE";
+        document.getElementById('GANASTE').style.height = "100%";
+        draw.break();
+        // alert("GAME OVER");
+        // document.location.reload();
       }
       //En caso de que toques el suelo y tengas mas de 1 vida se reseta la posición
       else {

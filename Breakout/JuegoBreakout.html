@@ -13,6 +13,12 @@
   <audio id="cancion">
     <source src="music/music2.mp3" type="audio/mp3">
   </audio>
+  <audio id="win">
+    <source src="music/win.mp3" type="audio/mp3">
+  </audio>
+  <audio id="def">
+    <source src="music/def.mp3" type="audio/mp3">
+  </audio>
   <audio id="beep">
     <source src="music/Beep2.wav" type="audio/wav">
   </audio>
@@ -21,7 +27,9 @@
   </audio>
 
   <div id="GANASTE">
-    <h1 id="TitleWin">dsadsadsa</h1>
+    <h1 id="TitleWin"></h1>
+    <h2 onclick="document.location.reload()">RESTART?</h2>
+    <button class="btn" id="zi" onclick="document.location.reload()">YES</button>
   </div>
   <div id="inicio">
     <h1 id="titulo">Breakout Online</h1>
@@ -32,6 +40,9 @@
     <input type="text" id="usuario">
     <br>
     <button id="btnJugar" class="btn" onclick="intro2()">Play!</button>
+    <br>
+    <br>
+    <h3>The game will start after a few seconds</h4>
   </div>
   <div id="Game">
     <div class="box">
